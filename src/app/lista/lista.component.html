@@ -1,0 +1,59 @@
+<div class="row">
+    
+    
+
+  <div class="col-md-10 mx-auto">
+     
+        
+<div>   
+    <div  [ngClass]="{'nascondi': service.context == 0}" ><h3 class="text-primary text-center" >
+        <span class="badge badge-success badge-pill"> Nuovo Record!</span> 
+        {{service.context}} </h3></div>
+    <div [ngClass]="{'nascondi': service.inizio == false}" class="fixed-top">
+    <button  class="btn btn-success float-right" (click)="moltFun()">{{service.moltDesc}}</button>
+  </div>
+    
+    <div class="row">
+        <div class="col-sm-4 py-2" *ngFor="let singolo of service.business" >
+        <div class="card border-dark bg-light mb-4 h-100" >
+            <div class="card-header text-light h4 bg-dark">{{singolo.name}} <span class="badge badge-success badge-pill" *ngIf="singolo.amountPower"  >{{shortenNumber(singolo.amountPower,2)}} $/s</span> </div>
+            <!-- <img class="card-img-top crop" [src]="singolo.image"> -->
+            <div class="card-body">
+                <strong><span class="text-info h5">Ne hai: </span> <span class="badge badge-primary badge-pill"> {{shortenNumber(singolo.amount,2)}}</span> 
+                  <span [ngClass]="{'nascondi': singolo.round == undefined}" class="text-light badge badge-warning badge-pill">{{"+" +singolo.round}}</span></strong><br>
+                <strong><span class="text-danger h5">Prezzo: </span> <span class="badge badge-danger badge-pill">$  {{shortenNumber(singolo.cost,2)}}</span></strong><br>
+                
+                <strong><span class="text-success h5">Genera: </span> 
+                  <span class="badge badge-success badge-pill"> $ {{shortenNumber(singolo.amountPs,2)}} /s</span> </strong>
+                  <hr>
+                  <button  [ngClass]="coloreBottone(singolo)" class="btn btn-primary float-right btn-block" (click)="compraBusiness(singolo)">
+                     Crea! 
+                      <span class="badge badge-light badge-pill">{{bottone(singolo)}} </span>
+                     
+                      </button>
+                      
+                      
+            </div>
+            
+          </div>
+        </div>
+          
+         
+        </div>
+    
+   
+  </div>
+</div>
+
+
+
+
+    
+    <app-crediti></app-crediti>
+
+  
+  
+
+
+  
+

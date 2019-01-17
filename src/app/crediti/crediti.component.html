@@ -1,0 +1,45 @@
+<nav class="navbar navbar-default navbar-fixed-bottom">
+<div>
+    <div class="jumbotron fixed-bottom strano">
+      <h3 class="text-dark text-center"><span class="badge badge-light badge-pill ">Crediti: 
+        <strong> <span class="badge badge-primary badge-pill ">{{ shortenNumber(service.gold, 2)}} $ </span> </strong>
+        <span [ngClass]="{'nascondi': roundClick == undefined}" class="text-light badge badge-warning badge-pill">{{"+" + shortenNumber(moltClick,2)}} $</span> 
+      </span></h3>
+        
+  
+           <h4 class="text-success text-center ">
+       
+       
+      <span class="text-primary text-center"><strong>
+            <span class="badge badge-success badge-pill">{{shortenNumber(service.totalPs,2)}} 
+           $/s</span> 
+
+        
+      </strong></span> </h4> 
+      <div class="row">
+
+      <div class="col-md-4 mx-auto">
+
+      <button   class="btn btn-success float-center btn-block" (click)="compraClick()">
+        Click Energy! 
+         <span class="badge badge-light badge-pill">Genera: {{shortenNumber(moltClick,2)}} </span>
+        
+         </button>
+        </div>
+         <div class="col-md-4 mx-auto">
+         <button   [ngClass]="colorBtnClick()" class="btn btn-primary float-center btn-block " (click)="aumentaClick()">
+          Potenzia Click! 
+           <span class="badge badge-light badge-pill">Prezzo: {{shortenNumber(moltClickPrezzo,2)}}</span>
+          
+           </button>
+          </div>
+        </div>
+      
+   
+
+  
+   
+
+</div>
+</div>
+</nav>

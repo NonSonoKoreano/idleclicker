@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/dist/css/bootstrap.css';
+@import '../node_modules/font-awesome/css/font-awesome.css';
+@import url(http://fonts.googleapis.com/css?family=Lato:400,300,700);
+
+
+body, button, input, textarea, select, details, .jumbotron, .btn, .strano, .list-group, .list-group-item-action, .list-group-item, .list-group, .row, .col-md-6, li, ul {
+    touch-action: manipulation !important;
+
+}
+.strano {
+    border: solid 5px rgb(52, 58, 64);
+    border-radius: 10px;
+    background-color: rgba(52, 58, 64, 0.8);
+    padding-top: 10px !important;
+    margin-bottom: -20px !important;
+    padding-bottom: 20px !important;
+
+  }
+  .nascondi {
+      display: none;
+  }
+  .crop {
+    height: 300px; /*container-width*/
+    overflow:hidden; /*hide bounds of image */
+    margin:0;   /*reset margin of figure tag*/
+}
+
+.crop img {
+    display:block; /*remove inline-block spaces*/
+    margin:-21.875% 0;
+    
+}
+body {
+    font-family: 'Lato', sans-serif !important;
+  }
+  
+  .center-pills {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+    width: 200px;
+}
