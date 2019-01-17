@@ -1,5 +1,5 @@
 # Idleclicker
-This is a simple ideclicker Game, created from scratch with Angular 7 and Bootstrap.
+This is a simple Idle Clicker Game, created from scratch with Angular 7 and Bootstrap.
 Live link http://idleclicker.surge.sh/
 This app is in ITALIAN Language.
 This app use cookies to save game progress.
