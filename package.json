@@ -27,6 +27,7 @@
     "font-awesome": "^4.7.0",
     "ngx-cookie-service": "^2.1.0",
     "rxjs": "~6.3.3",
+    "sass": "^1.42.1",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
